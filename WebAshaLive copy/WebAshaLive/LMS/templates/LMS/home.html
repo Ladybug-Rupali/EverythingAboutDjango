@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body{
+            background-color: rgb(241, 246, 109);
+        }
+        h1{
+            color: darkblue; 
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to LMS Dashboard</h1>
+    <table border="3px solid black" align="center" style="background-color: rgb(238, 155, 249);" width="40%">
+        <tr>
+           <th>Menu</th>
+           <th>References</th>
+           
+        </tr>
+
+        <tr>
+            <th>Username:</th>
+            <th>
+                <h1>{{request.user}}</h1>
+            </th>
+        </tr>
+
+        <tr>
+            <th>Home</th>
+            <!-- <th><a href="http://127.0.0.1:8000/lms/home/"  >Home</a></th> -->
+            <th><a href="{% url 'home' %} ">Home</a></th>
+        </tr>
+
+        <tr>
+            <th>Login</th>
+            <th><a href="{% url 'login' %}" target="__blank">Login</a></th>
+        </tr>
+
+        <tr>
+            <th>Logout</th>
+            <th><a href="{% url 'logout' %}" target="__blank">Logout</a></th>
+        </tr>
+
+
+
+        <tr>
+            <th>Register</th>
+            <th><a href="{% url 'register' %}" target="__blank">Register</a></th>
+        </tr>
+
+        <tr>
+            <th>Secure1</th>
+            <th><a href="{% url 'secure1' %}" target="__blank">Secure1</a></th>
+        </tr>
+
+        <tr>
+            <th>Secure2</th>
+            <th><a href="{% url 'secure2' %}" target="__blank">Secure2</a></th>
+        </tr>
+
+        <tr>
+            <th>Unsecure1</th>
+            <th><a href="{% url 'unsecure1' %}" target="__blank">unsecure1</a></th>
+        </tr>
+
+        <tr>
+            <th>Unsecure2</th>
+            <th><a href="{% url 'unsecure2' %}" target="__blank">Unsecure2</a></th>
+        </tr>
+       
+    </table>
+    
+</body>
+</html>

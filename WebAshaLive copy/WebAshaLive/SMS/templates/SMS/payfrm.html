@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paymentform</title>
+</head>
+<body bgcolor="pink">
+    <form method="post">
+        {% csrf_token %}
+    <h1 align="center">Student's Payment Details Form</h1>
+    <table align="center" border="1px solid black" bgcolor="yellow">
+        <tr>
+            <td>{{form}}</td>
+        </tr>
+        <tr>
+            <td>
+                <button>PAY</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

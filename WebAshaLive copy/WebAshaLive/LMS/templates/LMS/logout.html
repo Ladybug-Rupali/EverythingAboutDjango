@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        body{
+            background-color: rgb(240, 165, 165);
+        }
+        h1{
+            color: rgb(12, 12, 28); 
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+
+    
+    <h1>Logged out successfully!</h1>
+
+    
+
+
+    
+    
+
+    <a href="{% url 'home' %} ">Back to home page</a> 
+</form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure2 Page</title>
+    <style>
+        body{
+            background-color: rgb(226, 233, 122);
+        }
+        h1{
+            color: rgb(97, 6, 149); 
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to LMS secure2 page</h1>
+    <h3>This page can be accessed only after providing authentication.</h3>
+    <table align="center">
+        <tr>
+            <td><a href="{% url 'home' %} ">Back to home page</a></td>
+        </tr>
+    </table>
+</body>
+</html>

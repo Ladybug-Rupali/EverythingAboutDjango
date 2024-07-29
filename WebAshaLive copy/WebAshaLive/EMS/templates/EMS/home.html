@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMS Home</title>
+</head>
+
+<body bgcolor="yellow" align="center">
+    <form method="post">
+        {% csrf_token %}
+    <h1 align="center">SHOW EMPLOYEES RECORDS</h1>
+    <label>Enter Number of Employee You Want:</label>
+    <input type="text" name="txtNo">
+    <button type="submit">Show Employee</button>
+    <br></br>
+    <table bgcolor="pink" align="center" border="3">
+        <tr>
+            <th>S.No</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>MOBILENO</th>
+            <th>ADDRESS</th>
+            <th>POST</th>
+            <th>SALARY</th>
+        </tr>
+        {% for emp in employees  %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.age}}</td>
+            <td>{{emp.mobileno}}</td>
+            <td>{{emp.address}}</td>
+            <td>{{emp.post}}</td>
+            <td>{{emp.salary}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </form>
+</body>
+
+</html>

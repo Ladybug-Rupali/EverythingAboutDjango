@@ -1,0 +1,27 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'SMS/css/rupali.css' %}">
+    <script src="{% static 'SMS/js/rupam.js' %}"></script>
+    <title>Static Files</title>
+</head>
+<body>
+    <h1 align="center"><u><b>Hello this is example of static file in django!</b></u></h1>
+    <hr/>
+
+    <!-- <img src="http://127.0.0.1:8000/static/SMS/images/bappa.jpg" height="300px" width="300px" alt="Bappa image" /> -->
+    <img src="{% static 'SMS/images/bappa.jpg' %}" height="300px" width="300px" alt="Bappa image" />
+    <img src="{% static 'SMS/images/kanha.jpg' %}" height="300px" width="300px" alt="kanha image" />
+    <img src="{% static 'SMS/images/krishna.jpg' %}" height="300px" width="300px" alt="krishna image" />
+    <img src="{% static 'SMS/images/Mangalmurti.jpg' %}" height="300px" width="300px" alt="Mangalmurti image" />
+    <img src="{% static 'SMS/images/Narasimha.jpg' %}" height="300px" width="300px"  alt="Narasimha image" /> 
+    <img src="{% static 'SMS/images/shiva.jpg' %}" height="300px" width="300px" alt="shiva image" />
+    <img src="{% static 'SMS/images/vishnu.jpg' %}" height="300px" width="300px" alt="vishnu image" />
+    
+    <button type="submit" onclick="ladybug()">SUBMIT</button>
+</body>
+</html>

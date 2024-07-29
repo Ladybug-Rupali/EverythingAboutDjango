@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>*Welcome To My Calculator*</title>
+</head>
+{{a}} {{b}} {{c}}
+
+<body bgcolor="yellow">
+    <form method="post">
+        {% csrf_token %}
+        <h1 align='center'>*WELCOME TO CALCULATOR PROGRAM*</h1>
+        <table align="center" border="3" width="50%">
+            <tr>
+                <td>Enter First Number: </td>
+                <td><input type="text" name="t1" value="{{a}}"></td>
+            </tr>
+
+            <tr>
+                <td>Enter Second Number: </td>
+                <td><input type="text" name="t2" value="{{b}}"></td>
+            </tr>
+
+            <tr>
+                <td>Enter Result Number: </td>
+                <td><input type="text" value="{{c}}"></input>
+            </tr>
+            <tr>
+                <td><button type="submit" name="btnsum"> SUM </button>
+            </tr>
+
+            <tr>
+                <td><button type="submit" name="btnsub"> SUB </button>
+            </tr>
+
+            <tr>
+                <td><button type="submit" name="btnmult"> MULT </button>
+            </tr>
+
+            <tr>
+                <td><button type="submit" name="btndiv"> DIV </button>
+            </tr>
+
+
+        </table>
+    </form>
+</body>
+
+</html>

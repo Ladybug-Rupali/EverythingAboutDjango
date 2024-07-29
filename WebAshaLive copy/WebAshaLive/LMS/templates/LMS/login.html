@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        body{
+            background-color: rgb(240, 165, 165);
+        }
+        h1{
+            color: rgb(12, 12, 28); 
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+
+    
+    <h1>Welcome to LMS login page</h1>
+
+    <table border="1px solid black" align="center" bgcolor="yellow" height="40%">
+        <tr>
+            <th>Username:</th>
+            <th><input type="text" name="txtuser"></th>
+        </tr>
+
+        <tr>
+            <th>Password:</th>
+            <th><input type="password" name="txtpsw"></th>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center"><button type="submit" >LOGIN</button></td>
+            
+        </tr>
+    </table>
+
+    
+    
+
+    <a href="{% url 'home' %} ">Back to home page</a> 
+</form>
+</body>
+</html>

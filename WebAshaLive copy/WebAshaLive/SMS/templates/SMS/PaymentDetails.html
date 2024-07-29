@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</Details></title>
+</head>
+<body bgcolor="powder blue" align="center">
+    <form method="post">
+        {% csrf_token %}
+    <h1 align="center">***STUDENT WISE PAYMENT DEATILS***</h1>
+    <!-- Take input from user -->
+    Enter Student ID: <input type="text" name="txtId" value="{{id}}">
+
+    <!-- take a button to submit    -->
+    <button type="submit">Get Payment Details</button>
+    <br></br>
+
+
+    <table border="1px solid black" align="center" bgcolor="pink" >
+        <!-- made a table with headings  -->
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Payment_Mode</th>
+            <th>Date</th>
+        </tr>
+        <!-- To add data in table but access through backend using for loop accessing through key -->
+        {% for pay in payments %}
+        <!-- payments is a key from backend where allp is stored -->
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <!-- student name  is a key stu where s1 is stored -->
+            <td>{{stu.name}}</td>
+            <!-- pay is for loop variable through which accessing payments  -->
+            <td>{{pay.amount}}</td>
+            <td>{{pay.payment_mode}}</td>
+            <td>{{pay.payment_date}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </form>
+</body>
+</html>

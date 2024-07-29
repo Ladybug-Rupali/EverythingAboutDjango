@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course</title>
+</head>
+
+<body align="center" bgcolor="pink">
+    <!-- it is very important otherwise post request won't run  -->
+    <form method="post">
+        {% csrf_token %}
+        <h1>**COURSE WISE STUDENT DETAILS**</h1>
+        <hr>
+        <b>COURSE NAME:</b>
+        <!-- select tag opens drop down options  -->
+        <!-- select tag has given name to hold in backend  -->
+        <select name="txtid">
+            <!-- courses is key of dictionary from backend  -->
+            {% for course in courses %}
+            <!-- if cid of user input is equals to course.id(for loop var)  -->
+             <!-- it will be after post request we are giving if situation  -->
+            {% if cid == course.id %}
+            <!-- course id and name from database thats why course.name  -->
+            <!-- selected to hold the id data as it is  -->
+            <!-- to show all courses name after drop down -->
+            <option value="{{course.id}}" selected>{{course.name}}</option>
+            {% else %}
+            <!-- so else when only get is performed show python only  -->
+            <option value="{{course.id}}">{{course.name}}</option>
+            {% endif %}
+            {% endfor %}
+        </select>
+        <button type="submit">Get Student Details</button>
+        <br /><br />
+
+        <!-- To get data of students that particular course in table format  -->
+        <table border="1px solid black" align="center" bgcolor="yellow">
+            <h1>We Have Following Students of: {{cname}}</h1>
+            <tr>
+                <th>Sr.No.</th>
+                <th>Student Name</th>
+                <th>Mobile No.</th>
+                <th>Course Name</th>
+            </tr>
+            <!-- students is a key that holds allstu : d1['students']=allstu  -->
+            {% for stu in students%}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{stu.name}}</td>
+                <td>{{stu.mobileno}}</td>
+                <!-- d1['cname']=c.name it is a key that holds course name  -->
+                <td>{{cname}}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <th colspan="4" style="color: red;">No Student Enrolled.</th>
+            </tr>
+            {% endfor %}
+        </table>
+    </form>
+</body>
+
+</html>

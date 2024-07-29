@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: darksalmon;
+        }
+        h1{
+            color: darkblue; 
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <h1>THIS IS REGISTER PAGE OF LMS</h1>
+        <table bgcolor="yellow" align="center">
+            <tr>
+                <td>{{forms}}</td>
+            </tr>
+            <tr>
+                <td><button type="submit">SUBMIT</button></td>
+            </tr>
+            <tr>
+                <td><a href="{% url 'home' %} ">Back to home page</a></td>
+            </tr>
+        </table>
+       
+    </form>
+</body>
+</html>
