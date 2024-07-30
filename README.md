@@ -1,4 +1,4 @@
-# WebAshaLivve
+# WebAshaLive
 
 ### Overview
 
@@ -135,7 +135,7 @@ Contributions are welcome! If you have suggestions or find any bugs, please fork
 
 ### Contact
 
-For any questions, please contact [rplsgrv@gmail.com](mailto:rplsgrv@gmail.com).
+For any questions, please contact [rupaligurav0306@gmail.com](mailto:rupaligurav0306@gmail.com).
 
 
 ---
